@@ -30,8 +30,8 @@ class Generator(nn.Module):
         self.conv5 = nn.Conv3d(in_channels=256, out_channels=512, kernel_size=(4, 4, 4), stride=(2, 2, 2), padding=(1, 1, 1))
         self.bn5 = nn.BatchNorm3d(512)
         self.conv6 = nn.Conv3d(in_channels=512, out_channels=1024, kernel_size=(4, 4, 4), stride=(2, 2, 2), padding=(1, 1, 1))
-
-        # 定义反卷积层
+        
+        
         self.trans_conv1 = nn.ConvTranspose3d(in_channels=1024, out_channels=512, kernel_size=(4, 4, 4), stride=(2, 2, 2),
                                               padding=(1, 1, 1))
         self.bn6 = nn.BatchNorm3d(512)
