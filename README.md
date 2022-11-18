@@ -14,6 +14,14 @@ scipy 1.7.3
 matplotlib 3.5.0
 
 
+
+
+
+
+
+
+
+
 For 2D CWGAN-GP:
 Some directories are described as follows:
 Conditional information: for the testing datset, save the conditioning information with both sgems format and the gray-picture, saved in the conditional_data directories
