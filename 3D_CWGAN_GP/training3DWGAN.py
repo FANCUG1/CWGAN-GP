@@ -74,7 +74,6 @@ class Trainer():
         G_total_loss.backward()
         self.G_opt.step()
 
-        # 记录损失
         self.losses['G'].append(g_loss.item())
         self.losses['con_loss'].append(con_loss.item())
         self.losses['total_G'].append(G_total_loss.item())
@@ -215,6 +214,6 @@ class Trainer():
                     # loss_Y_X_Direction = (abs(temp3[j, :, :] - temp2[j, :, :])).mean()  # L1
 
             total_loss = loss_Y_X_Direction + loss_Z_Y_Direction + loss_Z_X_Direction
-            total_loss = np.array(total_loss, dtype=np.float16)  # 将np.float32类型转换为numpy数组类型
+            total_loss = np.array(total_loss, dtype=np.float16)
             total_loss = torch.from_numpy(total_loss).type(torch.FloatTensor)
             return Variable(total_loss).cuda()
