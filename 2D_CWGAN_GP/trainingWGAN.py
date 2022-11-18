@@ -146,7 +146,6 @@ class Trainer():
             img_grid = make_grid(generated_data.detach().cpu())
             save_image(img_grid, './fake_images/fake_images_{}.png'.format(epoch + 1))
 
-            # 每5轮进行一次模型的保存
             torch.save(self.G.state_dict(), './WGAN_GP_Model/WGAN_GP_Generator_{}.pth'.format(epoch + 1))
             # torch.save(self.D.state_dict(), './WGAN_GP_Model/WGAN_GP_Discriminator_{}.pth'.format(epoch + 1))
 
