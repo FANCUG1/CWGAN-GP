@@ -29,7 +29,7 @@ trainer.plot_loss(trainer.losses['total_G'], trainer.losses['D'])
 '''
 # validation process
 model_gen = Generator().cuda()
-model_gen.load_state_dict(torch.load('./WGAN_GP_Model/WGAN_GP_Generator_50.pth'))  # 读取的是50的那个模型
+model_gen.load_state_dict(torch.load('./WGAN_GP_Model/WGAN_GP_Generator.pth'))
 model_gen.eval()
 num = 0
 count_real = 0
@@ -70,7 +70,7 @@ with torch.no_grad():
 
         result = model_gen(datav)
         result = result.detach()
-        # 对生成的图片进行保存
+        
         save_image(result, './fake_images/model_training_test/rec_image_{}.png'.format(i + 1))
 
         result = result.detach().cpu().numpy()
