@@ -36,6 +36,18 @@ For validation, you can open the mainWGAN.py, finding the validation code and ca
 
 
 For 3D CWGAN-GP:
+Some directories are described as follows:
+fake_images: empty folder.
+
+test_generated_data: in the testing dataset, save the generated 3D subsurface models with sgems format.
+
+test_real_data: in the testing dataset, save the real 3D subsurface models with sgems format.
+
+test_section_data: in the testing dataset, save the corresponding cross-section datas along different axis respectively.
+
+WGAN_GP_Model_3D: save the generative model during training.
+
+For running the code, you can directly open the mainWGAN.py and training3DWGAN.py respectively, setting different parameters, then you can run the code to train the 3D generative models.
 
 
 
